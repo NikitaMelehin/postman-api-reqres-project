@@ -1,0 +1,15 @@
+{
+  "name": "reqres-postman-tests",
+  "version": "1.0.0",
+  "description": "Postman + Newman tests for Reqres.in",
+  "scripts": {
+    "test": "newman run \"collections/Users API Collection.postman_collection.json\" -e \"environments/ReqresEnv.postman_environment.json\" -r htmlextra,cli",
+    "test:report": "newman run \"collections/Users API Collection.postman_collection.json\" -e \"environments/ReqresEnv.postman_environment.json\" -r htmlextra --reporter-htmlextra-export \"reports/newman-report.html\""
+  },
+  "author": "NikitaMelehin",
+  "license": "MIT",
+  "devDependencies": {
+    "newman": "^6.0.0",
+    "newman-reporter-htmlextra": "^1.22.0"
+  }
+}
