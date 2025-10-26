@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "Postman + Newman tests for Reqres.in",
   "scripts": {
-    "test": "newman run \"collections/Users API Collection.postman_collection.json\" -e \"environments/ReqresEnv.postman_environment.json\" -r htmlextra,cli",
-    "test:report": "newman run \"collections/Users API Collection.postman_collection.json\" -e \"environments/ReqresEnv.postman_environment.json\" -r htmlextra --reporter-htmlextra-export \"reports/newman-report.html\""
+    "test": "newman run collections/users.postman_collection.json -e environments/reqres-env.postman_environment.json -r cli,htmlextra",
+    "test:report": "newman run collections/users.postman_collection.json -e environments/reqres-env.postman_environment.json -r htmlextra --reporter-htmlextra-export \"reports/newman-report.html\""
   },
-  "author": "NikitaMelehin",
-  "license": "MIT",
   "devDependencies": {
     "newman": "^6.0.0",
     "newman-reporter-htmlextra": "^1.22.0"
