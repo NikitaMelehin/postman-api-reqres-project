@@ -15,13 +15,14 @@ Automated API tests for https://reqres.in using **Postman** and **Newman**.
 ---
 
 ## 📌 Project Structure
+```
 ├── collections/         # Postman collection
 ├── environments/        # Postman environment
 ├── reports/             # HTML test reports
 ├── .github/workflows/   # CI configuration
 ├── package.json         # npm scripts
 └── README.md
-
+```
 ## 📌 Commands
 | Action | Command |
 |---------|---------|
