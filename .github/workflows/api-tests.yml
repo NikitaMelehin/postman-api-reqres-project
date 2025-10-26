@@ -3,8 +3,6 @@ name: API Tests
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   test:
@@ -23,4 +21,10 @@ jobs:
         run: npm install
 
       - name: Run Newman tests
-        run: npm test
+        run: npm run test:report
+
+      - name: Upload Report Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: newman-report
+          path: reports/
